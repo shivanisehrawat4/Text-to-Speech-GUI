@@ -15,7 +15,7 @@ To run this application, you need the following libraries:
 ## Application Components
 
 ### 1. Main Window
-- The main window is initialized using the Tk() constructor and is configured with a specific size, background color, and title.
+- The main window is initialized using the `Tk()` constructor and is configured with a specific size, background color, and title.
 - It is set to be non-resizable.
 
 ### 2. Heading
@@ -23,27 +23,27 @@ To run this application, you need the following libraries:
 
 ### 3. Text Input Field
 - A label "**Enter Text**" is displayed above an entry field where the user can input the text they want to convert to speech.
-- The user's input is stored in the **text_to_convert** variable of type StringVar().
+- The user's input is stored in the `text_to_convert` variable of type StringVar().
 
 ### 4. Buttons
-- **PLAY Button**: When clicked, it calls the **convert_text_to_speech()** function to convert the user's input text to speech. The generated speech is played, and a unique audio file is created for each conversion.
-- **EXIT Button**: When clicked, it calls the **exit_application()** function to close the application.
-- **RESET Button**: When clicked, it calls the **reset_entry_field()** function to clear the text input field.
+- **PLAY Button**: When clicked, it calls the `convert_text_to_speech()` function to convert the user's input text to speech. The generated speech is played, and a unique audio file is created for each conversion.
+- **EXIT Button**: When clicked, it calls the `exit_application()` function to close the application.
+- **RESET Button**: When clicked, it calls the `reset_entry_field()` function to clear the text input field.
 
 ### 5. Functions
 
-#### **convert_text_to_speech()**
+**convert_text_to_speech()**
 - Retrieves the text entered by the user from the input field.
 - Uses the **gTTS** library to convert the text to speech and generates a unique filename for the audio file.
 - Saves the generated speech as an MP3 audio file.
 - Plays the generated audio using the **playsound** library.
 - Cleans up by removing the temporary audio file after playback.
 
-#### **exit_application()**
+**exit_application()**
 - Destroys the main window, effectively closing the application.
 
-#### **reset_entry_field()**
-- Clears the text input field by resetting the **text_to_convert** variable.
+**reset_entry_field()**
+- Clears the text input field by resetting the `text_to_convert` variable.
 
 ## How to Use
 1. Run the script, and the application window will appear.
